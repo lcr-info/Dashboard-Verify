@@ -27,17 +27,29 @@ Se `fetch('/api/user')` responder 401, peça à pessoa para fazer login no Grafa
 1. Abra a origem do Grafana (`config.grafana`) no navegador embutido e confirme a sessão.
 2. Injete o conteúdo de `scripts/noc-engine.js` com o `javascript_tool`. A resposta esperada é `NOC <versão> carregado`.
 3. Monte `PAINEIS` como uma lista de `[operadora, direção, url]`, com direção `erro`, `sucesso` ou `outros`, a partir das pastas do `config.json`.
-4. Rode `NOC.start(PAINEIS, CONFIG)` e acompanhe com `NOC.status()` a cada 30–60 s. O `javascript_tool` tem limite de 45 s, então a rodada corre em segundo plano.
-   - Primeira rodada do dia: ~35–40 s por gráfico, porque monta a referência.
-   - Rodadas seguintes: alguns minutos para ~100 gráficos.
-5. Quando `NOC.state` começar com `done`, leia `NOC.msgs` (os alertas) e `NOC.resumo`.
-6. **Envio (destino `dm-proprio`):** descubra o usuário que está executando com `slack_read_user_profile` sem `user_id`. Envie cada `NOC.msgs[i].text` e depois o `NOC.resumo` com `slack_send_message`, usando o `user_id` dessa pessoa como `channel_id`.
+4. Rode `NOC.start(PAINEIS, CONFIG)`. A rodada corre em segundo plano, porque o `javascript_tool` tem limite de 45 s.
+5. **Acompanhamento (economia de tokens):** cada consulta ao status relê a conversa inteira, então consulte pouco.
+   - Espere com `sleep` no shell (Bash), e não com chamadas repetidas ao navegador.
+   - Faça a primeira checagem com `NOC.status()` depois de ~60 s.
+   - Se os logs mostrarem `ref ... baixados` com número maior que 0, a rodada está montando referências. É a primeira do dia ou o cache está vazio. Nesse caso, consulte **a cada ~10 min** (`sleep 540`).
+   - Se não, é uma rodada incremental. Consulte **a cada 1–2 min**.
+   - Tempos esperados com 174 gráficos:
+
+     | Rodada | Tempo |
+     |---|---|
+     | Sem cache (primeira vez na máquina, ou cache apagado) | ~1h40 |
+     | Primeira do dia em dia útil | ~20–25 min |
+     | Primeiro sábado/domingo | ~45 min |
+     | Incremental | poucos minutos |
+6. Quando `NOC.state` começar com `done`, leia `NOC.msgs` (os alertas) e `NOC.resumo`.
+7. **Envio (destino `dm-proprio`):** descubra o usuário que está executando com `slack_read_user_profile` sem `user_id`. Envie cada `NOC.msgs[i].text` e depois o `NOC.resumo` com `slack_send_message`, usando o `user_id` dessa pessoa como `channel_id`.
    - Se `config.alerta.destino` for o ID de um canal, envie para esse canal.
-7. Só depois que o envio der certo, rode `NOC.commit()` para gravar a deduplicação. Se algum envio falhar, rode `NOC.commit([índices enviados])`.
-8. Responda no chat com um resumo curto: quantos gráficos, quantos fora, e os principais desvios.
+8. Só depois que o envio der certo, rode `NOC.commit()` para gravar a deduplicação. Se algum envio falhar, rode `NOC.commit([índices enviados])`.
+9. Responda no chat com um resumo curto: quantos gráficos, quantos fora, e os principais desvios.
 
 ## Regras do motor
 - **Referência:** é calculada uma vez por dia local da operadora e guardada em cache no localStorage.
+  - O total por hora de cada dia fica guardado por 21 dias (`noc:v2:dias:*`), e na virada só os dias que faltam são buscados no Grafana. Os dias mais antigos são apagados sozinhos.
   - Dia útil: mediana por hora dos dias úteis entre os 7 dias anteriores.
   - Sábado e domingo: o mesmo dia da semana em D-7, D-14 e D-21.
 - **Alarme:**

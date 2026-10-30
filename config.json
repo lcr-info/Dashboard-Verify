@@ -3,6 +3,7 @@
   "tolerancia": 0.20,
   "pisoVolume": 100,
   "semDadosMin": 40,
+  "rebuscarDiaRecente": false,
   "alerta": {
     "destino": "dm-proprio",
     "mencao": ""

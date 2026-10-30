@@ -1,4 +1,4 @@
-// noc-engine.js — versão 2026-10-30-fork (fork exportável do motor 2026-10-06f)
+// noc-engine.js — versão 0.1.1 (fork exportável do motor 2026-10-06f; 0.1.1 = cache da referência por dia, 21 dias)
 // Mudanças do fork: parâmetros vêm de config.json (NOC.start(PAINEIS, CONFIG)); origem do Grafana = página atual;
 // fusos por operadora configuráveis; alertas sem canal fixo (padrão: DM para quem executa, sem @here); links em Markdown.
 // Roda no navegador embutido, na origem do Grafana (sessão SSO do usuário). Somente leitura no Grafana.
@@ -6,10 +6,10 @@
 // Cache: noc:v1:<uid>:<panelId>. Ao final: NOC.msgs (alertas com deduplicação; NOC.commit() após enviar) e NOC.resumo (follow-up da rodada).
 (() => {
   const OVERLAP = 45 * 60e3, STEP = 15 * 60e3, H = 3600e3;
-  let TOL = 0.20, PISO = 100, SEM_DADOS_MIN = 40, MENCAO = '', OFFSET = {};
+  let TOL = 0.20, PISO = 100, SEM_DADOS_MIN = 40, MENCAO = '', OFFSET = {}, REBUSCAR = false;
   // relógio da operadora = agora − OFFSET; OFFSET = (fuso do navegador − fuso da operadora) em horas
   function configure(cfg = {}) {
-    TOL = cfg.tolerancia ?? 0.20; PISO = cfg.pisoVolume ?? 100; SEM_DADOS_MIN = cfg.semDadosMin ?? 40;
+    REBUSCAR = !!cfg.rebuscarDiaRecente; TOL = cfg.tolerancia ?? 0.20; PISO = cfg.pisoVolume ?? 100; SEM_DADOS_MIN = cfg.semDadosMin ?? 40;
     MENCAO = cfg.alerta?.mencao ? cfg.alerta.mencao + ' ' : '';
     const tzNav = -new Date().getTimezoneOffset() / 60; OFFSET = {};
     for (const [op, o] of Object.entries(cfg.operadoras || {})) OFFSET[op] = (tzNav - (o.fuso ?? tzNav)) * H;
@@ -70,28 +70,63 @@
   // Referência do dia: mediana por hora. Dia útil × dias úteis dos 7 dias anteriores.
   // Fim de semana × o mesmo dia da semana (D-7, D-14, D-21): correção de 04/10, porque sábado tem volume de dia útil no VMS.
   const median = a => { const s = [...a].sort((x, y) => x - y), m = s.length >> 1; return s.length ? (s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2) : 0; };
-  async function buildRef(info, dayStart, log, scoped) {
+  // Cache por dia (v0.1.1): total por hora de cada série, por data, em noc:v2:dias:<painel>.
+  // Só busca no Grafana os dias que faltam. Com rebuscarDiaRecente=true, um dia buscado menos de 24 h depois do seu fim
+  // é buscado de novo no dia seguinte (pega correções tardias; dobra as consultas da virada). Padrão: false — a mediana
+  // de 5 dias já é pouco sensível a um dia levemente incompleto.
+  // Dias com mais de DIAS_CACHE são apagados a cada montagem de referência.
+  const DIAS_CACHE = 21;
+  const r2 = v => Math.round(v * 100) / 100;
+  function lsGet(k) { try { return JSON.parse(localStorage[k] || 'null'); } catch { return null; } }
+  function lsSet(k, v, log) {
+    try { localStorage[k] = JSON.stringify(v); return true; }
+    catch (e) { limparDias(14); try { localStorage[k] = JSON.stringify(v); return true; } catch { log && log('AVISO cache cheio, dia não guardado: ' + k); return false; } }
+  }
+  // apaga dias com mais de `manter` dias em todos os painéis (padrão 21; 14 se o espaço do navegador acabar)
+  function limparDias(manter = DIAS_CACHE) {
+    const lim = new Date(); lim.setHours(0, 0, 0, 0); lim.setDate(lim.getDate() - manter - 1);
+    const corte = dayStr(lim);
+    for (const k of Object.keys(localStorage)) {
+      if (k.startsWith('noc:v2:dias:')) {
+        const c = lsGet(k); if (!c?.dias) { localStorage.removeItem(k); continue; }
+        for (const d of Object.keys(c.dias)) if (d < corte) delete c.dias[d];
+        if (Object.keys(c.dias).length) localStorage[k] = JSON.stringify(c); else localStorage.removeItem(k);
+      } else if (k.startsWith('noc:v1:alertas:') && k.slice(-10) < corte) localStorage.removeItem(k);
+    }
+  }
+  async function buildRef(info, dayStart, log, scoped, key, nowOp) {
     const wd = dayStart.getDay(), weekend = wd === 0 || wd === 6, back = [];
     if (weekend) back.push(7, 14, 21);
     else for (let b = 1; b <= 7; b++) { const d = new Date(dayStart); d.setDate(d.getDate() - b); if (d.getDay() % 6) back.push(b); }
-    const perDay = {};
+    const dkey = 'noc:v2:dias:' + key.slice('noc:v1:'.length);
+    const dc = lsGet(dkey) || { dias: {} };
+    const perDay = {}; let baixados = 0, cache = 0;
     for (const b of back) {
       const s = new Date(dayStart); s.setDate(s.getDate() - b); const e = new Date(s); e.setDate(e.getDate() + 1);
-      const data = await query(info.ds, info.targets, s.getTime(), e.getTime() - 1, scoped);
-      for (const t of info.targets) {
-        const h = Array(24).fill(0);
-        for (const [ts, v] of data[t.key]) if (ts >= s.getTime() && ts < e.getTime()) h[new Date(ts).getHours()] += v;
-        (perDay[t.key] = perDay[t.key] || []).push(h);
-      }
+      const ds = dayStr(s); let dia = dc.dias[ds];
+      const completo = dia && info.targets.every(t => dia.h[t.key]);
+      const recente = REBUSCAR && dia && dia.em < e.getTime() + 24 * H; // buscado menos de 24 h depois do fim do dia
+      if (!completo || recente) {
+        const data = await query(info.ds, info.targets, s.getTime(), e.getTime() - 1, scoped);
+        dia = { em: nowOp, h: {} };
+        for (const t of info.targets) {
+          const h = Array(24).fill(0);
+          for (const [ts, v] of data[t.key]) if (ts >= s.getTime() && ts < e.getTime()) h[new Date(ts).getHours()] += v;
+          dia.h[t.key] = h.map(r2);
+        }
+        dc.dias[ds] = dia; baixados++;
+      } else cache++;
+      for (const t of info.targets) (perDay[t.key] = perDay[t.key] || []).push(dia.h[t.key]);
     }
+    lsSet(dkey, dc, log);
     const med = {}, zeradas = [];
     for (const t of info.targets) {
       const days = perDay[t.key] || [];
       if (days.every(h => h.every(v => !v))) { zeradas.push(t.key); continue; }
       med[t.key] = Array.from({ length: 24 }, (_, h) => median(days.map(d => d[h])));
     }
-    log(`  ref ${info.title}: dias ${back.join(',')}, ${Object.keys(med).length} ativas, ${zeradas.length} zeradas`);
-    return { refDays: back, med, zeradas };
+    log(`  ref ${info.title}: dias ${back.join(',')} (${baixados} baixados, ${cache} do cache), ${Object.keys(med).length} ativas, ${zeradas.length} zeradas`);
+    return { refDays: back, med, zeradas, baixados };
   }
 
   function evaluate(dir, med, pts, nowOp) {
@@ -125,7 +160,7 @@
     const info0 = await panelInfo(uid, pid), info = vars.length ? { ...info0, title: `${info0.title} [${vars.map(x => x[1]).join(' ')}]` } : info0;
     let c = JSON.parse(localStorage[key] || 'null');
     const dayStart = new Date(nowOp); dayStart.setHours(0, 0, 0, 0);
-    if (!c || c.ref?.dia !== today) { c = { ref: await buildRef(info, dayStart, log, scoped), hoje: null, zeroCheck: 0 }; c.ref.dia = today; localStorage[key] = JSON.stringify(c); }
+    if (!c || c.ref?.dia !== today) { c = { ref: await buildRef(info, dayStart, log, scoped, key, nowOp), hoje: null, zeroCheck: 0 }; c.ref.dia = today; localStorage[key] = JSON.stringify(c); }
     if (c.hoje?.dia !== today) c.hoje = { dia: today, pts: {}, confirmado: dayStart.getTime() };
     const ativos = info.targets.filter(t => c.ref.med[t.key]);
     const from = Math.max(dayStart.getTime(), (c.hoje.confirmado || dayStart.getTime()) - OVERLAP);
@@ -217,11 +252,12 @@
   }
 
   window.NOC = {
-    version: '2026-10-30-fork', state: 'idle', logs: [], result: null, msgs: null,
+    version: '0.1.1', state: 'idle', logs: [], result: null, msgs: null,
     status() { return { state: this.state, n: this.logs.length, last: this.logs.slice(-3) }; },
     start(PAINEIS, CONFIG) {
       configure(CONFIG); this.config = CONFIG || {};
       this.state = 'running'; this.logs = []; const t0 = Date.now();
+      try { limparDias(); } catch (e) { this.logs.push('AVISO limpeza do cache: ' + e); }
       (async () => {
         const results = [];
         for (const [op, dir, url] of PAINEIS) {
@@ -233,7 +269,7 @@
       })();
       return 'iniciado';
     },
-    evaluate, commit, seed,
+    evaluate, commit, seed, limparDias,
   };
   return 'NOC ' + window.NOC.version + ' carregado';
 })();

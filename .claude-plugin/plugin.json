@@ -1,6 +1,6 @@
 {
   "name": "noc-desvios",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rotina do NOC que lê os painéis do Grafana, compara com a curva histórica e avisa no Slack quem está executando.",
   "author": { "name": "Luiz Rodrigues" }
 }
