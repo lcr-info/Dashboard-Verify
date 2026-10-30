@@ -1,0 +1,12 @@
+{
+  "name": "noc-bemobi",
+  "owner": { "name": "Luiz Rodrigues" },
+  "plugins": [
+    {
+      "name": "noc-desvios",
+      "source": "./",
+      "description": "Rotina do NOC que lê os painéis do Grafana, compara com a curva histórica e avisa no Slack quem está executando.",
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "grafana": "https://grafanasp.bemobi.com.br",
+  "tolerancia": 0.20,
+  "pisoVolume": 100,
+  "semDadosMin": 40,
+  "alerta": {
+    "destino": "dm-proprio",
+    "mencao": ""
+  },
+  "operadoras": {
+    "Claro":   { "fuso": -3, "pasta": "paineis/Claro" },
+    "ClaroCA": { "fuso": -6, "pasta": "paineis/ClaroCA" },
+    "Tim":     { "fuso": -3, "pasta": "paineis/Tim" },
+    "Vivo":    { "fuso": -3, "pasta": "paineis/Vivo" }
+  }
+}

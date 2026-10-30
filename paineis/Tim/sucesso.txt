@@ -1,0 +1,68 @@
+https://grafanasp.bemobi.com.br/d/c-BfSU-Zz/vms-calls-handled-and-retrieval?orgId=1&refresh=1m&fullscreen&panelId=34
+https://grafanasp.bemobi.com.br/d/c-BfSU-Zz/vms-calls-handled-and-retrieval?orgId=1&refresh=1m&fullscreen&panelId=3
+https://grafanasp.bemobi.com.br/d/c-BfSU-Zz/vms-calls-handled-and-retrieval?orgId=1&refresh=1m&fullscreen&panelId=7
+https://grafanasp.bemobi.com.br/d/D9s4PcAWz/vms-charge-operations?orgId=1&fullscreen&panelId=82
+https://grafanasp.bemobi.com.br/d/xwTqCas4k/microloan-services?orgId=1&refresh=5m&fullscreen&panelId=26
+https://grafanasp.bemobi.com.br/d/QDo8TY3nz/smartcampaign?orgId=1&fullscreen&panelId=52
+https://grafanasp.bemobi.com.br/d/QDo8TY3nz/smartcampaign?orgId=1&fullscreen&panelId=27
+https://grafanasp.bemobi.com.br/d/2tf2JdpZk/topup-all-channels?orgId=1&refresh=5m&fullscreen&panelId=5
+https://grafanasp.bemobi.com.br/d/2tf2JdpZk/topup-all-channels?orgId=1&refresh=5m&fullscreen&panelId=6
+https://grafanasp.bemobi.com.br/d/2tf2JdpZk/topup-all-channels?orgId=1&refresh=5m&fullscreen&panelId=7
+https://grafanasp.bemobi.com.br/d/ck2CQntMz/integrador-de-ofertas?orgId=1&fullscreen&panelId=3
+https://grafanasp.bemobi.com.br/d/ck2CQntMz/integrador-de-ofertas?orgId=1&fullscreen&panelId=15&from=now-7d&to=now
+
+####### Adicionados em 30/10/2026 (dashboards de conferência do NOC) #######
+
+# Overview
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=51
+
+# Total Request
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=55
+
+# Elegible
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=58
+
+# VAS Offer Purchase - OK
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=74
+
+# Elegíveis
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=24
+
+# Retrieval Calls
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=41
+
+# Dial In / Dial out - Retrieval Calls
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=42
+
+# Dial in / Dial out - New Messages Heard
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=43
+
+# Charges
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=64
+
+# Charges - By Product
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=65
+
+# Subscriptions Notifications
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=66
+
+# Subscriptions Notifications - By Product
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=68
+
+# [SUCCESS] InsAss / First step / URA -> SERV
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=34
+
+# [SUCCESS] HubSubscribe / Second Step / SERV -> HUB
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=33
+
+# Access (All Channels)
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=4
+
+# Access by Product
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=6
+
+# Eligibilities
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=8
+
+# Not Eligibilities
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=9

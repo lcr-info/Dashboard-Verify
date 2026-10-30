@@ -1,0 +1,4 @@
+https://grafanasp.bemobi.com.br/d/-3k8wGfvz/integrador-de-ofertas?orgId=1&fullscreen&panelId=2&from=now-7d&to=now
+https://grafanasp.bemobi.com.br/d/V_lWKTAWk/vms-charge-operations?orgId=1&fullscreen&panelId=2&from=now-7d&to=now
+https://grafanasp.bemobi.com.br/d/2KLlFU-Wk/vms-calls-handled-and-retrieval?orgId=1&fullscreen&panelId=35&from=now-7d&to=now
+https://grafanasp.bemobi.com.br/d/2KLlFU-Wk/vms-calls-handled-and-retrieval?orgId=1&from=now-7d&to=now&fullscreen&panelId=3

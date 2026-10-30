@@ -1,0 +1,14 @@
+https://grafanasp.bemobi.com.br/d/D9s4PcAWz/vms-charge-operations?orgId=1&fullscreen&panelId=84
+https://grafanasp.bemobi.com.br/d/c-BfSU-Zz/vms-calls-handled-and-retrieval?orgId=1&refresh=1m&fullscreen&panelId=26
+https://grafanasp.bemobi.com.br/d/xwTqCas4k/microloan-services?orgId=1&refresh=5m&fullscreen&panelId=36
+
+####### Adicionados em 30/10/2026 (dashboards de conferência do NOC) #######
+
+# Not Elegible
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=59
+
+# Inelegíveis
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=21
+
+# Unsubscriptions Notifications
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=67

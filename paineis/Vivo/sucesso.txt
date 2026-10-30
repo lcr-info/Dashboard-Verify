@@ -1,0 +1,51 @@
+https://grafanasp.bemobi.com.br/d/2kq77mf7z/microloan-services?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=2
+https://grafanasp.bemobi.com.br/d/2kq77mf7z/microloan-services?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=3
+https://grafanasp.bemobi.com.br/d/2kq77mf7z/microloan-services?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=4
+https://grafanasp.bemobi.com.br/d/97XbANT4z/aprovisionamento?orgId=1&from=now-7d&to=now&refresh=5m&fullscreen&panelId=2
+https://grafanasp.bemobi.com.br/d/fM86Y4tMk/bemobiwebapi?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=32
+https://grafanasp.bemobi.com.br/d/Gbi4heBIz/edgesms-todos-sms?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=2
+https://grafanasp.bemobi.com.br/d/Gbi4heBIz/edgesms-todos-sms?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=3
+https://grafanasp.bemobi.com.br/d/Gbi4heBIz/edgesms-todos-sms?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=4
+https://grafanasp.bemobi.com.br/d/rOnj6XhWz/recarga-canal-ura?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=2
+https://grafanasp.bemobi.com.br/d/rOnj6XhWz/recarga-canal-ura?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=3
+https://grafanasp.bemobi.com.br/d/rOnj6XhWz/recarga-canal-ura?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=26
+https://grafanasp.bemobi.com.br/d/rOnj6XhWz/recarga-canal-ura?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=7
+https://grafanasp.bemobi.com.br/d/rOnj6XhWz/recarga-canal-ura?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=10
+https://grafanasp.bemobi.com.br/d/rOnj6XhWz/recarga-canal-ura?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=29
+https://grafanasp.bemobi.com.br/d/D-dR5w2Wk/recarga-todos-os-canais?orgId=1&from=now-7d&to=now&refresh=5m&fullscreen&panelId=2
+https://grafanasp.bemobi.com.br/d/D-dR5w2Wk/recarga-todos-os-canais?orgId=1&from=now-7d&to=now&refresh=5m&fullscreen&panelId=20
+https://grafanasp.bemobi.com.br/d/D-dR5w2Wk/recarga-todos-os-canais?orgId=1&from=now-7d&to=now&refresh=5m&fullscreen&panelId=10
+https://grafanasp.bemobi.com.br/d/HlYJgAgnk/recarga-plataforma-wsrecarga?orgId=1&refresh=1m&from=now-7d&to=now&fullscreen&panelId=20
+https://grafanasp.bemobi.com.br/d/HlYJgAgnk/recarga-plataforma-wsrecarga?orgId=1&refresh=1m&from=now-7d&to=now&fullscreen&panelId=5
+https://grafanasp.bemobi.com.br/d/l888H8-Wk/vms-calls-handled-and-retrieval?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=2
+https://grafanasp.bemobi.com.br/d/l888H8-Wk/vms-calls-handled-and-retrieval?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=12
+https://grafanasp.bemobi.com.br/d/73a935QZk/vms-vivo-avisa?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=20
+https://grafanasp.bemobi.com.br/d/ce6x6fxWz/zero-balance-accesses?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=2
+https://grafanasp.bemobi.com.br/d/ce6x6fxWz/zero-balance-accesses?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=3
+https://grafanasp.bemobi.com.br/d/ce6x6fxWz/zero-balance-accesses?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=4
+
+####### Adicionados em 30/10/2026 (dashboards de conferência do NOC) #######
+
+# Aprovisionamento - Overview
+https://grafanasp.bemobi.com.br/d/5vux6ETvz/vivo-services-overview?orgId=1&fullscreen&panelId=24
+
+# Aprovisionamento - VMS (Create/Modify/Delete OK)
+https://grafanasp.bemobi.com.br/d/5vux6ETvz/vivo-services-overview?orgId=1&fullscreen&panelId=25
+
+# Check Balance - Total Request and Channel Request
+https://grafanasp.bemobi.com.br/d/5vux6ETvz/vivo-services-overview?orgId=1&fullscreen&panelId=32
+
+# Recorded Messages
+https://grafanasp.bemobi.com.br/d/5vux6ETvz/vivo-services-overview?orgId=1&fullscreen&panelId=40
+
+# Retrieval Calls
+https://grafanasp.bemobi.com.br/d/5vux6ETvz/vivo-services-overview?orgId=1&fullscreen&panelId=20
+
+# Vivo Avisa - Missed Call SMS
+https://grafanasp.bemobi.com.br/d/5vux6ETvz/vivo-services-overview?orgId=1&fullscreen&panelId=14
+
+# Microloan - Elegíveis
+https://grafanasp.bemobi.com.br/d/5vux6ETvz/vivo-services-overview?orgId=1&fullscreen&panelId=28
+
+# Cliques no link Pix
+https://grafanasp.bemobi.com.br/d/5vux6ETvz/vivo-services-overview?orgId=1&fullscreen&panelId=27

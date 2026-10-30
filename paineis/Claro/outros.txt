@@ -1,0 +1,10 @@
+####### Adicionados em 30/10/2026 (dashboards de conferência do NOC) #######
+
+# Elegible and Inelegible
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=38
+
+# Zero Balance - Elegible - All products
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=18
+
+# Success - All Payments Methods - Credit Card
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=38

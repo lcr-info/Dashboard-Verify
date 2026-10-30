@@ -1,0 +1,12 @@
+https://grafanasp.bemobi.com.br/d/ck2CQntMz/integrador-de-ofertas?orgId=1&from=now%2Fd&to=now%2Fd&fullscreen&panelId=4
+
+####### Adicionados em 30/10/2026 (dashboards de conferência do NOC) #######
+
+# Panel Title
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=53
+
+# Adesões - Vasconn Geral
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=61
+
+# Adesões - Hub
+https://grafanasp.bemobi.com.br/d/bA2bv9Tvk/tim-services-overview?orgId=1&fullscreen&panelId=63

@@ -1,0 +1,20 @@
+https://grafanasp.bemobi.com.br/d/97XbANT4z/aprovisionamento?orgId=1&from=now-7d&to=now&refresh=5m&fullscreen&panelId=8
+https://grafanasp.bemobi.com.br/d/97XbANT4z/aprovisionamento?orgId=1&from=now-7d&to=now&refresh=5m&fullscreen&panelId=6
+https://grafanasp.bemobi.com.br/d/Gbi4heBIz/edgesms-todos-sms?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=5
+
+####### Movidos de sucesso.txt em 30/10/2026 (painéis de erro) #######
+
+# Microloan Services › Não Elegíveis Total
+https://grafanasp.bemobi.com.br/d/2kq77mf7z/microloan-services?orgId=1&refresh=5m&from=now-7d&to=now&fullscreen&panelId=7
+
+# Recarga - Todos os Canais › Falhas Técnicas na Integração com a M4U
+https://grafanasp.bemobi.com.br/d/D-dR5w2Wk/recarga-todos-os-canais?orgId=1&from=now-7d&to=now&refresh=5m&fullscreen&panelId=15
+
+# Recarga - Todos os Canais › Recargas Negadas pela M4U
+https://grafanasp.bemobi.com.br/d/D-dR5w2Wk/recarga-todos-os-canais?orgId=1&from=now-7d&to=now&refresh=5m&fullscreen&panelId=22
+
+# Recarga - Todos os Canais › Transações Encerradas por Falha Técnica
+https://grafanasp.bemobi.com.br/d/D-dR5w2Wk/recarga-todos-os-canais?orgId=1&from=now-7d&to=now&refresh=5m&fullscreen&panelId=29
+
+# Recarga - Plataforma wsRecarga › Detalhamento de Erros nas Notificações M4U
+https://grafanasp.bemobi.com.br/d/HlYJgAgnk/recarga-plataforma-wsrecarga?orgId=1&refresh=1m&from=now-7d&to=now&fullscreen&panelId=21

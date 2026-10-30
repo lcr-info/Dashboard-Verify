@@ -1,0 +1,190 @@
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=4
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=17
+
+https://grafanasp.bemobi.com.br/d/SYeC3feZz/vms-billing?orgId=1&fullscreen&panelId=28
+
+https://grafanasp.bemobi.com.br/d/u9vk7oqVz/top-up-sms?orgId=1&refresh=5m&fullscreen&panelId=2
+
+https://grafanasp.bemobi.com.br/d/u9vk7oqVz/top-up-sms?orgId=1&refresh=5m&fullscreen&panelId=4
+
+####### VMS - DEPOSITO #######
+
+# BASE 
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2&var-Granularity=15m&var-Region=BASE&var-Machine=All
+
+# CO 
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2&var-Granularity=15m&var-Region=CO&var-Machine=All
+
+# MG 
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2&var-Granularity=15m&var-Region=MG&var-Machine=All
+
+# NE 
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2&var-Granularity=15m&var-Region=NE&var-Machine=All
+
+# NO
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2&var-Granularity=15m&var-Region=NO&var-Machine=All
+
+# PRSC 
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2&var-Granularity=15m&var-Region=PRSC&var-Machine=All
+
+# RJ 
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2&var-Granularity=15m&var-Region=RJ&var-Machine=All
+
+# RS 
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2&var-Granularity=15m&var-Region=RS&var-Machine=All
+
+
+# SP1  
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2&var-Granularity=15m&var-Region=SP1&var-Machine=All
+
+# SP2
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=2&var-Granularity=15m&var-Region=SP2&var-Machine=All
+
+
+
+########## MENSAGENS GRAVADAS ######
+
+BASE
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3&var-Granularity=15m&var-Region=BASE&var-Machine=All
+
+CO
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3&var-Granularity=15m&var-Region=CO&var-Machine=All
+
+MG
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3&var-Granularity=15m&var-Region=MG&var-Machine=All
+
+NE
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3&var-Granularity=15m&var-Region=NE&var-Machine=All
+
+NO
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3&var-Granularity=15m&var-Region=NO&var-Machine=All
+
+PRSC
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3&var-Granularity=15m&var-Region=PRSC&var-Machine=All
+
+RJ
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3&var-Granularity=15m&var-Region=RJ&var-Machine=All
+
+RS
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3&var-Granularity=15m&var-Region=RS&var-Machine=All
+
+SP1
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3&var-Granularity=15m&var-Region=SP1&var-Machine=All
+
+SP2
+
+https://grafanasp.bemobi.com.br/d/zYgIyDnGz/vms-deposito-e-resgate?orgId=1&refresh=5m&fullscreen&panelId=3&var-Granularity=15m&var-Region=SP2&var-Machine=All
+
+####### Adicionados em 30/10/2026 (dashboards de conferência do NOC) #######
+
+# Integrações com Sucesso
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=44
+
+# Elegible
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=41
+
+# Subscriptions
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=48
+
+# Charges Geral
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=50
+
+# Transactions
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=46
+
+# Charge Attempts
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=32
+
+# Finalization
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=36
+
+# Loan Subscription and Charges / Fee Charges
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=37
+
+# Enrollment USSD - Cadastramento Concluído com Sucesso
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=24
+
+# Enrollment USSD - Total de Chamadas Atendidas
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=26
+
+# Enrollment Web - Cadastro concluído com sucesso
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=22
+
+# Zero Balance - Accesses (All Channels)
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=2
+
+# Zero Balance - Access - All products
+https://grafanasp.bemobi.com.br/d/Yy8qgz1Dk/claro-services-overview-2?orgId=1&fullscreen&panelId=16
+
+# Recarga - Sucessos (Todos os Canais)
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=57
+
+# Success - All Payment Methods (USSD)
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=43
+
+# Successful Credit Card USSD
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=46
+
+# Successful Pix USSD
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=47
+
+# Access - USSD
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=49
+
+# Access - USSD (555 e 544)
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=50
+
+# Access - USSD 1052
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=58
+
+# Access (WIB)
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=55
+
+# Success - All Payments Methods (IVR)
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=36
+
+# Success - All Payments Methods - Pix
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=39
+
+# Accesses (IVR)
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=40
+
+# Accesses (IVR) por número
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=41
+
+# Retrieval Calls
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=28
+
+# Charges - All Products
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=22
+
+# VMS Bundle - Deposit Calls / Recorded Messages
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=16
+
+# VMS Bundle - Retrieval Calls / New Messages Heard
+https://grafanasp.bemobi.com.br/d/_WVfoSAvk/claro-topup-and-vms-overview?orgId=1&fullscreen&panelId=17
